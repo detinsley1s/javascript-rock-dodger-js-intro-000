@@ -81,7 +81,7 @@ function createRock(x) {
     let topNum = rock.style.top.replace('px', '')
     let t = parseInt(topNum, 10)
     rock.style.top = `${t + 2}px`
-    
+
     /**
      * If a rock collides with the DODGER,
      * we should call endGame().
