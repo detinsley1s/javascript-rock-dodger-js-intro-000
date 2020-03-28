@@ -55,7 +55,6 @@ function checkCollision(rock) {
 
 function createRock(x) {
   const rock = document.createElement('div')
-let temp = 0
   rock.className = 'rock'
   rock.style.left = `${x}px`
 
@@ -75,7 +74,6 @@ let temp = 0
    * seems like a good pace.)
    */
   function moveRock() {
-    temp += 1
 
     console.log('move')
     // implement me!
@@ -83,7 +81,7 @@ let temp = 0
     let topNum = rock.style.top.replace('px', '')
     let t = parseInt(topNum, 10)
     rock.style.top = `${t + 2}px`
-console.log(rock.style.top)
+    
     /**
      * If a rock collides with the DODGER,
      * we should call endGame().
@@ -97,11 +95,11 @@ console.log(rock.style.top)
      */
      topNum = rock.style.left.replace('px', '')
      t = parseInt(topNum, 10)
-     if (t > GAME_HEIGHT - 20 || temp > 10) {
+     if (t > GAME_HEIGHT - 20) {
        rock.remove()
      }
      else {
-       //moveRock()
+       moveRock()
      }
     /**
      * But if the rock *has* reached the bottom of the GAME,
