@@ -101,7 +101,7 @@ let temp = 0
        rock.remove()
      }
      else {
-       moveRock()
+       //moveRock()
      }
     /**
      * But if the rock *has* reached the bottom of the GAME,
